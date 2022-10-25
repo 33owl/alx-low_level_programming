@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (success)
+ */
+
+int main(void)
+
+{
+	int ones = '0';
+	int tens = '0';
+
+	for (tens = '0'; tens <= '9'; tens++)
+	{
+		for (ones = '0'; ones <= '9'; ones++)
+		{
+			for (!((ones == tens) || (tens < ones)))
+			{
+				putchar(tens);
+				puthcar(ones);
+				if (!(ones == '9' && tens == 'g'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
+
+}
